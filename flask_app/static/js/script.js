@@ -11,12 +11,14 @@ async function github_api_call(element){
     console.log(data) //  user data 
     console.log(data.name) // user name
     console.log(data.avatar_url) // user profile picture
+    console.log(data.followers) // shows users followers on github
 
     gitCard.innerHTML = `
         <br />
         <img src="${data.avatar_url}" alt="picture of ${data.name}" 
         class="w-50 p-3 rounded-circle">
         <h2> Hello ${data.name}!</h2>
+        <h2> you have ${data.followers} followers on Github</h2>
 
 
     `
