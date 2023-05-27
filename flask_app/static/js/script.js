@@ -9,9 +9,11 @@ async function github_api_call(element){
     let response = await fetch('https://api.github.com/users/DaliusBeckjr')
     let data = await response.json()
     console.log(data) //  user data 
-    console.log(data.name) // user name
-    console.log(data.avatar_url) // user profile picture
-    console.log(data.followers) // shows users followers on github
+    console.log('name: ' + data.name) // user name
+    console.log('pic: ' + data.avatar_url) // user profile picture
+    console.log('followers: ' + data.followers) // shows users followers on github
+    //bonus
+    console.log('login: ' + data.login)
 
     gitCard.innerHTML = `
         <br />
@@ -19,8 +21,6 @@ async function github_api_call(element){
         class="w-50 p-3 rounded-circle">
         <h2> Hello ${data.name}!</h2>
         <h2> you have ${data.followers} followers on Github</h2>
-
-
     `
 }
 
