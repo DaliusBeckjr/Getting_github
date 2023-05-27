@@ -13,7 +13,7 @@ async function github_api_call(element){
     console.log('pic: ' + data.avatar_url) // user profile picture
     console.log('followers: ' + data.followers) // shows users followers on github
     //bonus
-    console.log('login: ' + data.login)
+    console.log('login: ' + data.login) // show user login for the user
 
     gitCard.innerHTML = `
         <br />
